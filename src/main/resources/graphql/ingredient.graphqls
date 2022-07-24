@@ -1,0 +1,10 @@
+type Ingredient {
+	ingredientId: ID!
+	description: String!
+	quantity: String
+	recipe: Recipe
+}
+extend type Query {
+	findAllIngredients: [Ingredient]!
+	countIngredients: Long!
+}

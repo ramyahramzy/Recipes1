@@ -1,0 +1,11 @@
+type Recipe {
+    recipeId: ID!
+    name: String!
+    serve: Int
+    instruction: String
+}
+# Root
+type Query {
+	findAllRecipes: [Recipe]!
+	countRecipe: Long!
+}
