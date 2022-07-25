@@ -30,7 +30,7 @@ public class RecipesAPIController {
 
     @GetMapping(value = "/recipe/{id}")
     public Recipe getRecipes(@PathVariable long id) {
-        
+
         return recipeRepo.findById(id).get();
     }
 
