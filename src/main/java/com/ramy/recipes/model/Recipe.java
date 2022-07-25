@@ -28,6 +28,11 @@ public class Recipe {
     @Column
     private boolean vegetarian;
 
+
+
+    @OneToMany(mappedBy = "recipe" ,cascade = CascadeType.ALL)
+    private Set<Ingredient> ingredients;
+
     public Set<Ingredient> getIngredients() {
         return ingredients;
     }
@@ -35,9 +40,6 @@ public class Recipe {
     public void setIngredients(Set<Ingredient> ingredients) {
         this.ingredients = ingredients;
     }
-
-    @OneToMany(cascade = CascadeType.ALL)
-    private Set<Ingredient> ingredients;
 
     public long getRecipeId() {
         return recipeId;
